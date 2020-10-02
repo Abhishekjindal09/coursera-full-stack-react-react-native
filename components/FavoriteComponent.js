@@ -86,11 +86,17 @@ class Favorites extends Component {
         }
         else {
             return(
+                <>
                 <FlatList
                     data={this.props.dishes.dishes.filter(dish => this.props.favorites.some(el => el === dish.id))}
                     renderItem={renderMenuItem}
                     keyExtractor={item => item.id.toString()}
                 />
+                        <input type="text" placeholder="Add a Items" onChange={itemEvent} value={inputList}/>
+                    <Button className="my_btn" onClick={listOfItmes} variant="contained" color="primary">
+                        <AddIcon />
+                    </Button>
+                        </>
             );
         }
     }
