@@ -1,5 +1,6 @@
 /* eslint-disable react/jsx-filename-extension */
 import React, { Component } from 'react';
+import AddIcon from '@material-ui/icons/Add';
 import {
   FlatList,
   ScrollView,
@@ -65,6 +66,7 @@ function CorporateLeadership(props) {
       <Card title="Corporate Leadership">
         {corporateLeaderCardBody}
       </Card>
+      <AddIcon />
     );
   }
 
