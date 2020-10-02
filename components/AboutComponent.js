@@ -96,4 +96,27 @@ class About extends Component {
   }
 }
 
+class Detail extends Component {
+  static navigationOptions = {
+    title: 'About Us',
+  };
+
+  render() {
+    const { leaders } = this.props;
+
+    return (
+      <ScrollView>
+        <Animatable.View animation="fadeInDown" duration={2000}>
+          <History />
+          <CorporateLeadership
+            leaders={leaders.leaders}
+            isLoading={leaders.isLoading}
+            errMess={leaders.errMess}
+          />
+        </Animatable.View>
+      </ScrollView>
+    );
+  }
+}
+
 export default connect(mapStateToProps)(About);
