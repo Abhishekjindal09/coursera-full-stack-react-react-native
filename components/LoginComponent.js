@@ -2,6 +2,7 @@
 /* eslint-disable react/jsx-filename-extension */
 /* eslint-disable no-console */
 import React, { Component } from 'react';
+import Button from '@material-ui/core/Button';
 import {
   StyleSheet,
   ScrollView,
@@ -134,6 +135,7 @@ class LoginTab extends Component {
           value={password}
           containerStyle={styles.formInput}
         />
+            <Button >Click me</Button>
         <CheckBox
           title="Remember Me"
           checked={remember}
